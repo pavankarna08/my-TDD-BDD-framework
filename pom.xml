@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.magnitia</groupId>
+  <artifactId>org.TDD.BDD.Pico.framework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+       <!--    for WebSite automation    -->
+       <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.0.0-beta-3</version>
+      </dependency>
+      <!--    for browser drivers    -->
+      <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.1</version>
+      </dependency>
+      <!--    for Angular if exists    -->    
+      <dependency>
+            <groupId>com.paulhammant</groupId>
+            <artifactId>ngwebdriver</artifactId>
+            <version>1.1.6</version>
+      </dependency>
+      <!--    for frameworks   -->
+      <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.4.0</version>
+            <scope>test</scope>
+      </dependency>
+      <!--   cucumber-testng     -->
+	  <dependency>
+   	        <groupId>io.cucumber</groupId>
+    	    <artifactId>cucumber-testng</artifactId>
+    	    <version>6.7.0</version>
+	  </dependency>
+      <!--   cucumber-java    -->
+	  <dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-java</artifactId>
+    		<version>6.7.0</version>
+	  </dependency>
+      <!--    cucumber-picocontainer     -->
+	  <dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-picocontainer</artifactId>
+    		<version>6.7.0</version>
+    		<scope>test</scope>
+	  </dependency>
+      <!--    for excel file    -->
+      <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.0.0</version>
+      </dependency>
+      <!--    Sikulix for non html elements   -->
+      <dependency>
+            <groupId>Raimen</groupId>
+            <artifactId>sikuliX</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>F:\batch253\org.TDD.BDD.Pico.framework\src\test\resources\extrajars\sikulixapi.jar</systemPath>
+      </dependency>
+      <!--    for video recording   -->
+      <dependency>
+            <groupId>org.magnitia</groupId>
+            <artifactId>ATUTestRecorder</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <systemPath>F:\batch253\org.TDD.BDD.Pico.framework\src\test\resources\extrajars\ATUTestRecorder_2.1.jar</systemPath>
+      </dependency> 
+      <dependency>
+            <groupId>org.magnitia</groupId>
+            <artifactId>ATUReporter_selenium_testNG</artifactId>
+            <version>5.1.1</version>
+            <scope>system</scope>
+            <systemPath>F:\batch253\org.TDD.BDD.Pico.framework\src\test\resources\extrajars\ATUReporter_Selenium_testNG_5.1.1.jar</systemPath>
+      </dependency> 
+      <!--   for full page screenshot if required    -->
+      <dependency>
+           <groupId>ru.yandex.qatools.ashot</groupId>
+           <artifactId>ashot</artifactId>
+           <version>1.5.4</version>
+      </dependency>
+  </dependencies>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.6.2</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
+		<plugin>	
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.0.0-M3</version>
+			<configuration>
+				<suiteXmlFiles>
+					<suiteXmlFile>${xyz}</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+</project>
